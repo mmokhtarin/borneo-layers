@@ -3,50 +3,306 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Borneo Layers | Authentic Sarawak Heritage</title>
+  <title>Borneo Crumbles | Artisanal Kek Batik Showcase</title>
   <style>
-    :root { --gold: #D4AF37; --brown: #4A2C11; --cream: #FDFBF7; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: var(--cream); color: var(--brown); text-align: center; }
-    header { background-color: #fff; padding: 2rem 1rem; border-bottom: 2px solid var(--gold); }
-    h1 { margin: 0; font-size: 2.2rem; letter-spacing: 2px; }
-    p.tagline { margin: 0.5rem 0 0; font-style: italic; color: #7a583a; }
-    .hero { padding: 3rem 1rem; max-width: 800px; margin: auto; }
-    .badge { display: inline-block; padding: 0.3rem 0.8rem; background: var(--gold); color: #fff; border-radius: 20px; font-size: 0.85rem; font-weight: bold; margin-bottom: 1rem; }
-    .grid { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 2rem; }
-    .card { background: #fff; border-radius: 8px; padding: 1.5rem; width: 220px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #eee; }
-    .btn { display: inline-block; margin-top: 1rem; padding: 0.6rem 1.2rem; background-color: var(--gold); color: #fff; text-decoration: none; border-radius: 4px; font-weight: bold; }
-    footer { margin-top: 4rem; padding: 1.5rem; font-size: 0.85rem; color: #888; border-top: 1px solid #eee; }
+    :root {
+      --gold: #FFB703;
+      --orange: #FB8500;
+      --berry: #D90429;
+      --teal: #2A9D8F;
+      --purple: #7209B7;
+      --choco: #3D1E05;
+      --cream: #FFFDF9;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #FFF8EE 0%, #FFE5EC 50%, #E8F8F5 100%);
+      color: var(--choco);
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--choco) 0%, #6F1D1B 50%, var(--choco) 100%);
+      color: #fff;
+      padding: 2.2rem 1rem;
+      border-bottom: 5px solid var(--gold);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    p.tagline {
+      margin: 0.5rem 0 0;
+      font-style: italic;
+      color: #FFD166;
+      font-size: 1.05rem;
+    }
+
+    .hero {
+      padding: 2.5rem 1rem;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.45rem 1.1rem;
+      background: linear-gradient(90deg, var(--berry), var(--orange));
+      color: #fff;
+      border-radius: 25px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      margin-bottom: 1rem;
+      box-shadow: 0 3px 8px rgba(217, 4, 41, 0.25);
+    }
+
+    .hero h2 {
+      font-size: 1.9rem;
+      margin: 0.5rem 0;
+      color: #581845;
+    }
+
+    .hero > p {
+      max-width: 650px;
+      margin: 0.5rem auto 2rem;
+      color: #5c4033;
+      line-height: 1.5;
+    }
+
+    .grid {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      width: 265px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+      border: 2px solid rgba(255, 183, 3, 0.3);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-top-bar {
+      height: 6px;
+      width: 100%;
+    }
+    .bar-classic { background: linear-gradient(90deg, var(--orange), var(--gold)); }
+    .bar-indulgence { background: linear-gradient(90deg, var(--berry), var(--purple)); }
+    .bar-matcha { background: linear-gradient(90deg, var(--teal), #80ED99); }
+
+    .cake-img-container {
+      width: 100%;
+      height: 170px;
+      background-color: #faf3e8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #f0e6d8;
+    }
+
+    .card-body {
+      padding: 1.3rem 1.4rem 1.6rem;
+    }
+
+    .flavor-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+      margin-bottom: 0.5rem;
+    }
+    .tag-classic { background: #FFF3CD; color: #B45309; }
+    .tag-indulgence { background: #FCE7F3; color: #BE185D; }
+    .tag-matcha { background: #D1FAE5; color: #047857; }
+
+    .card h3 {
+      margin: 0.3rem 0 0.5rem;
+      font-size: 1.25rem;
+      color: var(--choco);
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #6b5344;
+      line-height: 1.4;
+      margin: 0 0 1.2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.3rem;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 0.85rem;
+    }
+    .btn-classic { background: linear-gradient(90deg, var(--orange), #F77F00); }
+    .btn-indulgence { background: linear-gradient(90deg, var(--berry), var(--purple)); }
+    .btn-matcha { background: linear-gradient(90deg, var(--teal), #38A3A5); }
+
+    footer {
+      margin-top: 4rem;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #fff;
+      background: var(--choco);
+      border-top: 4px solid var(--gold);
+      letter-spacing: 0.5px;
+    }
+    footer strong {
+      color: var(--gold);
+    }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>BORNEO LAYERS</h1>
-    <p class="tagline">Preserving Heritage, Layer by Layer</p>
+    <h1>BORNEO CRUMBLES</h1>
+    <p class="tagline">Vibrant Malaysian Kek Batik, Crafted Chunk by Chunk</p>
   </header>
+
   <div class="hero">
-    <span class="badge">Web Application Staging Demo</span>
-    <h2>Handcrafted Sarawak Kek Lapis, Reimagined for the Digital Era</h2>
-    <p>Explore our seasonal catalog, customize traditional layer patterns, and order fresh artisanal cakes direct to your doorstep.</p>
+    <span class="badge">TMF3973 Sem 1 26/27 • Web Application Staging Demo</span>
+    <h2>Handcrafted Sarawak & Malaysian Kek Batik, Reimagined</h2>
+    <p>Explore our colorful artisanal catalog featuring crunchy Marie biscuit mosaics folded into rich fudge, creamy ganache, and vibrant local flavors.</p>
+
     <div class="grid">
+
+      <!-- Card 1: Classic Kek Batik -->
       <div class="card">
-        <h3>Lapis Masam Manis</h3>
-        <p>Classic haw flakes layered with pure rich butter.</p>
-        <span class="btn">View Details</span>
+        <div class="card-top-bar bar-classic"></div>
+        <div class="cake-img-container">
+          <!-- Custom SVG Illustration of Classic Kek Batik Mosaic -->
+          <svg viewBox="0 0 240 150" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <rect width="240" height="150" fill="#FFF3E0"/>
+            <!-- Cake Base -->
+            <rect x="35" y="25" width="170" height="105" rx="6" fill="#4A2511"/>
+            <!-- Top Glossy Fudge Glaze -->
+            <rect x="35" y="25" width="170" height="18" rx="4" fill="#2A1205"/>
+            <!-- Golden Sprinkle Dots -->
+            <circle cx="60" cy="30" r="2.5" fill="#FFB703"/>
+            <circle cx="95" cy="34" r="2" fill="#FB8500"/>
+            <circle cx="135" cy="29" r="2.5" fill="#FFB703"/>
+            <circle cx="175" cy="33" r="2" fill="#FFE66D"/>
+            <!-- Marie Biscuit Mosaic Pieces -->
+            <polygon points="48,52 82,48 76,68 45,65" fill="#F4A261"/>
+            <polygon points="90,50 130,55 122,72 88,68" fill="#E9C46A"/>
+            <polygon points="140,48 190,52 185,70 138,65" fill="#F4A261"/>
+            <polygon points="52,78 95,75 88,95 48,92" fill="#E9C46A"/>
+            <polygon points="105,80 148,76 152,96 102,94" fill="#F4A261"/>
+            <polygon points="160,75 192,80 188,98 158,95" fill="#E9C46A"/>
+            <polygon points="45,103 85,102 80,120 48,118" fill="#F4A261"/>
+            <polygon points="95,104 140,100 135,120 92,118" fill="#E9C46A"/>
+            <polygon points="148,103 190,105 186,122 145,119" fill="#F4A261"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <span class="flavor-tag tag-classic">Bestseller</span>
+          <h3>Kek Batik Klasik Milo</h3>
+          <p>Crunchy Marie biscuit ribbons folded in rich malted cocoa and pure golden butter.</p>
+          <span class="btn btn-classic">View Details</span>
+        </div>
       </div>
+
+      <!-- Card 2: Kek Batik Indulgence -->
       <div class="card">
-        <h3>Lapis Cadbury</h3>
-        <p>Signature Sarawak layer cake with melted chocolate ribbons.</p>
-        <span class="btn">View Details</span>
+        <div class="card-top-bar bar-indulgence"></div>
+        <div class="cake-img-container">
+          <!-- Custom SVG Illustration of Berry & Cheese Kek Batik Indulgence -->
+          <svg viewBox="0 0 240 150" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <rect width="240" height="150" fill="#FCE7F3"/>
+            <!-- Cake Base -->
+            <rect x="35" y="20" width="170" height="110" rx="6" fill="#3B170B"/>
+            <!-- Dark Ganache & Berry Top -->
+            <rect x="35" y="20" width="170" height="16" rx="4" fill="#9D0208"/>
+            <!-- Cream Cheese Middle Layer -->
+            <rect x="35" y="36" width="170" height="22" fill="#FFFDF7"/>
+            <!-- Berry Swirls on Cream Cheese -->
+            <circle cx="70" cy="47" r="4" fill="#D90429"/>
+            <circle cx="120" cy="47" r="4" fill="#7209B7"/>
+            <circle cx="170" cy="47" r="4" fill="#D90429"/>
+            <!-- Biscuit Mosaic in Bottom Fudge -->
+            <polygon points="46,66 85,64 80,84 44,80" fill="#F3C68F"/>
+            <polygon points="95,65 142,68 136,86 92,83" fill="#E6AA68"/>
+            <polygon points="150,64 192,67 188,85 148,82" fill="#F3C68F"/>
+            <polygon points="50,92 98,90 92,108 46,105" fill="#E6AA68"/>
+            <polygon points="108,93 155,89 150,108 104,106" fill="#F3C68F"/>
+            <polygon points="162,90 194,93 190,110 160,108" fill="#E6AA68"/>
+            <polygon points="55,114 115,113 110,124 52,124" fill="#F3C68F"/>
+            <polygon points="125,113 185,114 182,124 122,124" fill="#E6AA68"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <span class="flavor-tag tag-indulgence">Premium</span>
+          <h3>Kek Batik Indulgence</h3>
+          <p>Decadent three-tier batik cake topped with velvety cream cheese, berry compote, and dark ganache.</p>
+          <span class="btn btn-indulgence">View Details</span>
+        </div>
       </div>
+
+      <!-- Card 3: Matcha & Pistachio Kek Batik -->
       <div class="card">
-        <h3>Lapis Polkadot</h3>
-        <p>Vibrant geometric mosaic pattern with rich pandan aroma.</p>
-        <span class="btn">View Details</span>
+        <div class="card-top-bar bar-matcha"></div>
+        <div class="cake-img-container">
+          <!-- Custom SVG Illustration of Matcha Pistachio Kek Batik -->
+          <svg viewBox="0 0 240 150" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <rect width="240" height="150" fill="#E8F8F5"/>
+            <!-- Cake Base -->
+            <rect x="35" y="25" width="170" height="105" rx="6" fill="#2D6A4F"/>
+            <!-- White Choco Matcha Glaze -->
+            <rect x="35" y="25" width="170" height="20" rx="4" fill="#52B788"/>
+            <!-- Pistachio & Berry Crumbs -->
+            <circle cx="65" cy="34" r="3" fill="#D8F3DC"/>
+            <circle cx="105" cy="31" r="2.5" fill="#FF4D6D"/>
+            <circle cx="145" cy="35" r="3" fill="#FFE66D"/>
+            <circle cx="180" cy="31" r="2.5" fill="#FF4D6D"/>
+            <!-- Biscuit & Pistachio Mosaic Pieces -->
+            <polygon points="48,54 86,50 80,70 45,67" fill="#F4A261"/>
+            <polygon points="94,52 135,56 128,74 90,70" fill="#FFE5B4"/>
+            <polygon points="144,50 192,54 186,72 140,68" fill="#F4A261"/>
+            <polygon points="50,80 92,77 86,96 46,93" fill="#FFE5B4"/>
+            <polygon points="102,81 150,78 154,97 100,95" fill="#F4A261"/>
+            <polygon points="162,77 194,81 190,99 160,96" fill="#FFE5B4"/>
+            <polygon points="48,104 88,103 83,121 46,119" fill="#F4A261"/>
+            <polygon points="98,105 142,101 138,121 95,119" fill="#FFE5B4"/>
+            <polygon points="150,104 190,106 186,122 148,120" fill="#F4A261"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <span class="flavor-tag tag-matcha">New Fusion</span>
+          <h3>Kek Batik Matcha Pistachio</h3>
+          <p>Vibrant Uji matcha chocolate fudge layered with roasted pistachio nuts and crisp biscuits.</p>
+          <span class="btn btn-matcha">View Details</span>
+        </div>
       </div>
+
     </div>
   </div>
+
   <footer>
-    TM13083/TMF3973/TMS3853 Web Application Development | UN SDG 4 Initiative
+    <strong>TMF3973 Sem 1 26/27: Web Application Development G02</strong> | UN SDG 4 Initiative
   </footer>
+
 </body>
 </html>
