@@ -30,6 +30,17 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
+    .logo-img {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      background-color: var(--cream);
+      margin-bottom: 0.8rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    }
+
     h1 {
       margin: 0;
       font-size: 2.3rem;
@@ -53,7 +64,7 @@
 
     .badge {
       display: inline-block;
-      padding: 0.35rem 0.9rem;
+      padding: 0.35rem 1.2rem;
       background: var(--gold);
       color: #fff;
       border-radius: 20px;
@@ -148,46 +159,48 @@
 <body>
 
   <header>
+    <!-- Displays your image.png logo if saved in the same folder, hides automatically if not found -->
+    <img src="image.png" alt="Borneo Layers Logo" class="logo-img" onerror="this.style.display='none'">
     <h1>BORNEO LAYERS</h1>
     <p class="tagline">Preserving Heritage, Layer by Layer</p>
   </header>
 
   <div class="hero">
-    <span class="badge">Web Application Staging Demo</span>
-    <h2>Handcrafted Borneo Kek Batik, Reimagined for the Digital Era</h2>
-    <p>Explore our seasonal catalog, customize traditional batik biscuit patterns, and order fresh artisanal cakes direct to your doorstep.</p>
+    <span class="badge">Demo</span>
+    <h2>Handcrafted Sarawak Kek Lapis, Reimagined for the Digital Era</h2>
+    <p>Explore our seasonal catalog, customize traditional layer patterns, and order fresh artisanal cakes direct to your doorstep.</p>
 
     <div class="grid">
 
-      <!-- Card 1 -->
+      <!-- Card 1: Lapis Masam Manis -->
       <div class="card">
         <div class="card-accent accent-1"></div>
-        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Batik_cake.jpg?width=500" alt="Kek Batik Klasik">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kek_Lapis_Sarawak.jpg?width=500" alt="Lapis Masam Manis">
         <div class="card-content">
-          <h3>Kek Batik Klasik</h3>
-          <p>Crunchy Marie biscuit layers folded with rich Milo and pure golden butter.</p>
+          <h3>Lapis Masam Manis</h3>
+          <p>Classic haw flakes layered with pure rich butter and vibrant heritage stripes.</p>
           <span class="btn btn-1">View Details</span>
         </div>
       </div>
 
-      <!-- Card 2 -->
+      <!-- Card 2: Lapis Cadbury -->
       <div class="card">
         <div class="card-accent accent-2"></div>
-        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kek_Batik_chocolate_indulgence.jpg?width=500" alt="Kek Batik Indulgence">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sarawak_layer_cake.jpg?width=500" alt="Lapis Cadbury">
         <div class="card-content">
-          <h3>Kek Batik Indulgence</h3>
-          <p>Signature batik cake topped with velvety cream cheese and melted dark chocolate ganache.</p>
+          <h3>Lapis Cadbury</h3>
+          <p>Signature Sarawak layer cake with melted chocolate ribbons and velvety crumb.</p>
           <span class="btn btn-2">View Details</span>
         </div>
       </div>
 
-      <!-- Card 3 -->
+      <!-- Card 3: Lapis Polkadot -->
       <div class="card">
         <div class="card-accent accent-3"></div>
-        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Malaysian_batik_cake.jpg?width=500" alt="Kek Batik Borneo Heritage">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kek_lapis_sarawak_02.jpg?width=500" alt="Lapis Polkadot">
         <div class="card-content">
-          <h3>Kek Batik Tradisi</h3>
-          <p>Vibrant geometric mosaic pattern with rich cocoa fudge and aromatic pandan notes.</p>
+          <h3>Lapis Polkadot</h3>
+          <p>Vibrant geometric mosaic pattern infused with rich pandan and creamy aroma.</p>
           <span class="btn btn-3">View Details</span>
         </div>
       </div>
